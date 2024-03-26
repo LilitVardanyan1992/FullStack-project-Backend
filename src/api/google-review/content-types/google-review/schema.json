@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "google_reviews",
+  "info": {
+    "singularName": "google-review",
+    "pluralName": "google-reviews",
+    "displayName": "Google_reviews",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "author_title": {
+      "type": "string"
+    },
+    "review_text": {
+      "type": "text"
+    },
+    "review_datetime_utc": {
+      "type": "date"
+    },
+    "author_image": {
+      "type": "string"
+    },
+    "review_rating": {
+      "type": "integer"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::company.company",
+      "inversedBy": "google_reviews"
+    }
+  }
+}
